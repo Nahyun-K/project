@@ -1,0 +1,6 @@
+﻿  6.c
+c:\users\nh\desktop\c언어 과제\project1\project1\6.c(7): warning C4101: 'low' :참조되지 않은 지역 변수입니다.
+c:\users\nh\desktop\c언어 과제\project1\project1\6.c(7): warning C4101: 'temp_low' :참조되지 않은 지역 변수입니다.
+c:\users\nh\desktop\c언어 과제\project1\project1\6.c(7): warning C4101: 'hi' :참조되지 않은 지역 변수입니다.
+c:\users\nh\desktop\c언어 과제\project1\project1\6.c(7): warning C4101: 'temp_hi' :참조되지 않은 지역 변수입니다.
+  Project1.vcxproj -> C:\Users\NH\Desktop\c언어 과제\Project1\Debug\Project1.exe
