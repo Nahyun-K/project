@@ -1,4 +1,5 @@
 
+/* 상단바 */
 nav{
     font-size: 12pt;
     font-family: 'PT Sans', Arial, Sans-serif;
@@ -48,13 +49,16 @@ nav a#pull{
   li a{
     color: #FFFFFF;
     text-align: center;
-    padding: 14.5px 16px;
+    padding: 14.5px 40px;
     text-decoration: none;
   }
   li a:hover{
-    /*color: #597812;*/
     color: #FFD400;
     font-weight:normal;
+  }
+  body{
+    margin: 0px;
+    background-color:#F6F6F6
   }
   .menu {
    width: 5000px;
@@ -64,5 +68,131 @@ nav a#pull{
    background-position: center;
    background-size: cover;
    background-color: #333333;color: white;
-   position: absolute;z-index: 1;
+   position: fixed;
+   z-index: 1;
  }
+.left {
+  margin: 0;
+  width: 40%;
+  height: 1000px;
+  background-color: red;
+  position: relative;
+  display: inline-block;
+}
+.middle {
+  margin: 0;
+  width: 400px;
+  height: 500px;
+  background-color: blue;
+  display: inline-block;
+  text-align: center;
+}
+.right {
+  margin: 0;
+  left: -250px;
+  top: -100px;
+  width: 30%;
+  height: 500px;
+  background-color: aqua;
+  position: relative;
+  display: inline-block;
+}
+.profile {
+  width: 200px;
+  height: auto;
+  position: relative;
+  top: 60px;
+}
+
+
+
+
+
+
+
+/* favorite.html */
+
+.fav {
+  width: 400px;
+  height: 480px;
+  display: inline-block;
+  background-color: rebeccapurple;
+  text-align: center;
+  margin: 10px;
+}
+.fav-Doosan {
+  width: 240px;
+  height: auto;
+  margin: 25px;
+}
+.fav-list {
+  text-align: center;
+}
+.fav-title {
+ color: #F6F6F6;
+}
+
+.fav-left {
+  margin: 200px 50px 200px 250px; /* 뒤 오 아래 왼 */
+  display: inline-block;
+}
+.fav-right-text {
+  display: inline-block;
+}
+.fav-right {
+  background-color: violet;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+/* guest.html */
+.instagram {
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px #E2E2E2;
+  width: 400px;
+  height: auto;
+}
+
+.i-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+.i-img {
+  width: 400px;
+  height: 400px;
+}
+.i-id {
+  display: inline-block;
+}
+.fa-user {
+  margin: 10px 25px 10px 25px;
+}
+.insta-div {
+  display: inline;
+}
+.i-con {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-ellipsis-vertical {
+  margin: 25px;
+}
+.fa-heart {
+  width: 40px;
+  height: auto;
+  margin: 20px 0px 25px 20px;
+}
+.fa-bookmark {
+  margin: 20px;
+}
+
+
+
+/* https://studiomeal.com/archives/197 */
