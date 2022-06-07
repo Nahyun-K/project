@@ -71,46 +71,90 @@ nav a#pull{
    position: fixed;
    z-index: 1;
  }
-.left {
-  margin: 0;
-  width: 40%;
-  height: 1000px;
-  background-color: red;
-  position: relative;
+ 
+ /* index.html */
+ .main-background {
+   width: 40%;
+   height: 1000px;
+   background-color: aqua;
+  display: inline-block;
+ }
+.main-self {
+  padding: 20px;
+  width: 300px;
+  height: 600px;
+  background-color: antiquewhite;
   display: inline-block;
 }
-.middle {
-  margin: 0;
-  width: 400px;
-  height: 500px;
-  background-color: blue;
-  display: inline-block;
-  text-align: center;
-}
-.right {
-  margin: 0;
-  left: -250px;
-  top: -100px;
-  width: 30%;
-  height: 500px;
-  background-color: aqua;
-  position: relative;
-  display: inline-block;
-}
-.profile {
-  width: 200px;
+.main-img {
+  width: 150px;
   height: auto;
-  position: relative;
-  top: 60px;
 }
 
+/* resume.html */
+.myprofile{
+  padding: 100px 200px 100px 200px;
+}
+.img_myprofile{
+   width: 200px;
+   height: auto;
+  border-radius: 50%;
+}
+.myprofile_git {
+  width: 100px;
+  height: auto;
+}
+.myprofile-lst {
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  background-color: #E2E2E2;
+}
 
+.language {
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  background-color: #E2E2E2;
+}
+.skill-c{
+  width: 100px;
+  height: auto;
+}
 
+.skill-java{
+  width: 100px;
+  height: auto;
 
-
+}
+.skill-python{
+  width: 100px;
+  height: auto;
+}
+.skill-htmlcssjs{
+  width: 100px;
+  height: auto;
+}
+.skill-mysql{
+  width: 100px;
+  height: auto;
+}
+.skill-php{
+  width: 100px;
+  height: auto;
+}
+.skill-r{
+  width: 100px;
+  height: auto;
+}
 
 
 /* favorite.html */
+.fav-whole {
+  margin: 80px 10px;
+}
 
 .fav {
   width: 400px;
@@ -131,19 +175,16 @@ nav a#pull{
 .fav-title {
  color: #F6F6F6;
 }
-
-.fav-left {
-  margin: 200px 50px 200px 250px; /* 뒤 오 아래 왼 */
+.fav-img {
   display: inline-block;
+  vertical-align:top;
 }
+
 .fav-right-text {
-  display: inline-block;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
-.fav-right {
-  background-color: violet;
-  display: inline-block;
-}
-
 
 
 
@@ -152,17 +193,19 @@ nav a#pull{
 
 
 /* guest.html */
+.sns-info {
+  display: flex;
+  justify-content: space-between;
+}
 .instagram {
-  border: 1px solid black;
-  box-shadow: 10px 10px 10px #E2E2E2;
+  box-shadow: 10px 10px 15px #E2E2E2;
   width: 400px;
   height: auto;
+  margin: 50px 20px 50px 600px;
 }
-
 .i-header {
   display: flex;
   justify-content: space-between;
-
 }
 .i-img {
   width: 400px;
@@ -192,7 +235,12 @@ nav a#pull{
 .fa-bookmark {
   margin: 20px;
 }
-
+.info {
+  margin: 50px 700px 50px 20px;
+}
+.emailto {
+  
+}
 
 
 /* https://studiomeal.com/archives/197 */
