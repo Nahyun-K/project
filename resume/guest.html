@@ -1,63 +1,151 @@
-<!-- 이력서 html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> Resume </title>
-    <script src="https://kit.fontawesome.com/e5f0416edf.js" crossorigin="anonymous"></script>
+    <title> HOME </title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <!-- 상단바 -->
     <div class="menu" >
       <nav class="clearfix">
         <ul class="clearfix">
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="#">Project</a></li>
+          <li><a href="test2.html">Project</a></li>
           <li><a href="favorite.html">favorite</a></li>
           <li><a href="guest.html">방명록</a></li>
       </ul>
       <a id="pull" href="#"></a>
     </nav>
     </div>
-    <br />
-    <br />
-
-
     
-    <p>contact</p>
+    
+<script type="text/javascript">
 
+   var boardArray = new Array();
 
-    <!-- 개인정보 info 이 페이지는 따로 뺄까 고민중 -->
-    <div class="sns-info">
-      <div class="instagram">
-        <div class="i-header">
-          <div>
-            <i class="fa-solid fa-user fa-lg"></i>
-            <p class="i-id">hyunee.0__0</p>
-          </div>
-          <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-        </div>
-        <img class="i-img" src="./media/instagram.jpg" >
-        <div class="i-con">
-          <div>
-            <i class="fa-solid fa-heart fa-lg"></i>
-            <i class="fa-light fa-comment fa-lg"></i>
-          </div>
-          <i class="fa-regular fa-bookmark fa-lg"></i>
-        </div>
-      </div>
-      <div class="info">
-        <address class="emailto">
-          Email: <a href="mailto:23xian@naver.com">Nahyun-Kweon</a>
-        </address>
-        <a href="http://naver.com"><i class="fa-brands fa-instagram"></i></a>
-        <a href="http://naver.com"><i class="fa-solid fa-b"></i></a>
-        <a href="http://naver.com"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="http://naver.com"><i class="fa-solid fa-phone"></i></a>
-        <p>Tel: 010.7245.3121</p>
-      </div>
+   function Board(uName, uContent)
+   {
+      this.userName=uName;
+      this.content=uContent;
+      this.writeDay=new Date();
+   }
+   
+   Board.prototype.userLocalString = function()
+   {
+      return this.writeDay.getFullYear() + "-"
+          + (this.writeDay.getMonth()+1) + "-"
+          + this.writeDay.getDate() + "-"
+          + this.writeDay.getHours() + ":"
+          + this.writeDay.getSeconds();
+              
+   }
+
+   function main()
+   {
+      
+      var uName = document.getElementById("uName").value;
+      var uContent = document.getElementById("uContent").value;
+      
+      var len = boardArray.length;
+      
+      boardArray[len] = new Board(uName, uContent);
+      
+      
+      print(len);
+      
+   }
+   
+   function print(idx)
+   {
+      
+      var tableNode = document.getElementById("bbsTable");
+      var trNode = document.createElement("tr");
+      
+      //trNode.appendChild(createTdNode((idx+1).toString()));
+      trNode.appendChild(createTdNode(boardArray[idx].userName));
+      trNode.appendChild(createTdNode(boardArray[idx].content));
+      trNode.appendChild(createTdNode(boardArray[idx].userLocalString()));
+      
+      tableNode.appendChild(trNode);
+   }
+   
+   function createTdNode(val)
+   {
+      var textNode = document.createTextNode(val);
+      var tdNode = document.createElement("td");
+      tdNode.appendChild(textNode);
+      return tdNode;
+   }
+   
+   function clear()
+   {
+	
+	   	document.getElementById("uName").value="";
+	   	document.getElementById("uContent").value="";
+	   	document.getElementById("uName").focus();
+	   
+   }
+
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Text Soap</h1>
+
+  <p class="comment">This begins one morning with my friend in San Diego telling me about an earthquake they just had.</p>
+
+    <div class="imessage">
+        <p class="from-them">Hi~  <br /> 히사시부리 </p>
+        <p class="from-me">Like is this an earthquake just go back to sleep</p>
+        <p class="from-them margin-b_one">It&rsquo;s more like &ldquo;this is an earthquake. Check the Internet. Yup. Earthquake. This is the size. This is the epicenter. Check social media. Make sure the East Coast knows I&rsquo;m alive. Okay, try and go back to sleep.&rdquo;</p>
+        <p class="from-me no-tail emoji">👍🏻</p>
+        <p class="from-me">Glad you&rsquo;re safe</p>
     </div>
+  </div>
+
+<div id="guest-book">
+   
+   <div>
+      <form>
+         <!-- 입력 폼을 구성하는 레이아웃 테이블 -->
+         <table class="tbl">
+            <tr>
+               <th>작성자</th>
+               <td>
+                  <input type="text" id="uName">
+               </td>
+            </tr>
+            <tr>
+               <th>내용</th>
+               <td>
+                  <input type="text" id="uContent">
+               </td>
+            </tr>
+         </table>
+         
+         <br>
+         <input type="button" class="btn" value="submit" onclick="main()">
+         
+         <br><br>
+         <!-- 방명록의 내용이 리스트 형식으로 보여지는 레이아웃 테이블 -->
+         <table class="tbl" id="bbsTable">
+            <tr class="tb1-tr">
+               <!--<th>번호</th>-->
+               <th class="guest-table guest-writer" width="150px">작성자</th>
+               <th class="guest-table guest-content" width="400px">내용</th>
+               <th class="guest-table gueset-date" width="150px">작성일</th>
+            </tr>
+         </table>
+      </form>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+   </div>
+</div>
+
+
+
   </body>
 </html>

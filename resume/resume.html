@@ -23,31 +23,33 @@
 
 
     <div class="myprofile">
-      <img class="img_myprofile"src="media/myprofile.jpg" alt="Avatar">
-      <p>권나현</p>
-      <p>정보융합학부 4학년 데이터사이언스 전공</p>
-      <p>2018.03.02 ~ ing</p>
-      <p>Git 주소<a href="https://github.com/Nahyun-K"><img class="myprofile_git"src="media/git_logo.png" alt="git_logo">Nahyun-K</a></p>
-      <p class="myprofile-lst"><i class="fa-solid fa-folder"></i>About ME</p>
-      <p class="myprofile-lst"><i class="fa-solid fa-desktop"></i>Projects</p>
-      <p class="myprofile-lst"><i class="fa-solid fa-desktop"></i>Work Skills</p>
-      <p class="myprofile-lst"><i class="fa-solid fa-graduation-cap"></i>Education</p>
-      
-      
+      <div class="myprofile-in">
+        <img class="img_myprofile"src="media/myprofile.jpg" alt="Avatar">
+        <p>권나현</p>
+        <p>정보융합학부 4학년 데이터사이언스 전공</p>
+        <p>2018.03.02 ~ ing</p>
+        <p>Git 주소<a href="https://github.com/Nahyun-K"><img class="myprofile_git"src="media/git_logo.png" alt="git_logo">Nahyun-K</a></p>
+        <p class="myprofile-lst"><i class="fa-solid fa-folder"></i> About ME </p>
+        <p class="myprofile-lst"><i class="fa-solid fa-desktop"></i> Projects </p>
+        <p class="myprofile-lst"><i class="fa-solid fa-desktop"></i> Work Skills </p>
+        <p class="myprofile-lst"><i class="fa-solid fa-graduation-cap"></i> Education </p>
+      </div>
     </div>
 
-    <div>
-      <div>
+    <div id="resume">
+      <div id="about-me">
         <!-- About ME -->
-        <p><i class="fa-solid fa-folder"></i>About ME</p>
-        <p>블라블라 내소개~</p>
+        <p class="resume-title"><i class="fa-solid fa-folder"></i> About ME </p>
+        <p>안녕하세요! 정보융학학부 데이터사이언스 전공 4학년 권나현입니다<br />
+        파이썬을 주 언어로 사용하고 있고 웹 개발에 관심이 있습니다<br />
+      </p>
       </div>
       
-      <p><i class="fa-solid fa-folders"></i>Projects</p>
-      <div>
-        <!-- Projects -->
+      <!-- Projects -->
+      <div id="projects">
+        <p class="resume-title"><i class="fa-solid fa-desktop"></i> Projects </p>
         <dl>
-          <dt><a href="https://github.com/Nahyun-K/2020_ReliabilityEvaluationUsingSNS">SNS 정보를 활용한 소상공인 발전 가능성 평가 서비스</a></dt>
+          <dt class="dt"><a href="https://github.com/Nahyun-K/2020_ReliabilityEvaluationUsingSNS">SNS 정보를 활용한 소상공인 발전 가능성 평가 서비스</a></dt>
           <dd>산학연계 SW프로젝트</dd>
         </dl>
         <dl>
@@ -72,30 +74,41 @@
         </dl>
         
       </div>
+      <!-- Work Skills -->
+      <div id="work-skills">
+        <p class="resume-title"><i class="fa-solid fa-desktop"></i> Work Skills </p><br />
+        <p>주언어는 python java입니다 <br /> 그 외 다룰 줄 아는 언어들입니다</p>
 
-      <div>
-        <!-- Work Skills -->
-        <p><i class="fa-solid fa-desktop"></i>Work Skills</p>
-        <p class="language lan-c">C programming</p>
-        <p class="language lan-java">JAVA</p>
-        <p class="language lan-python">Python</p>
-        <p class="language lan-html">HTML</p>
-        <p class="language lan-css">css</p>
-        <p class="language lan-js">Java script</p>
-        <p class="language lan-sql">sql</p>
-          
         <img class="skill_img skill-c"src="media/C_Logo.png" alt="C_Logo">
         <img class="skill_img skill-java"src="media/Java_Logo.png" alt="Java_Logo">
         <img class="skill_img skill-python"src="media/Python_Logo.png" alt="Python_Logo">
         <img class="skill_img skill-htmlcssjs"src="media/HtmlCssJs_Logo.png" alt="HtmlCssJs_Logo">
         <img class="skill_img skill-mysql"src="media/MySql_Logo.png" alt="MySql_Logo">
         <img class="skill_img skill-php"src="media/PHP_Logo.png" alt="PHP_Logo">
-        <img class="skill_img skill-r"src="media/R_Logo.png" alt="R_Logo">
+        <img class="skill_img skill-php"src="/media/AndroidStudio_Logo.png" alt="Android_Logo">
+        <img class="skill_img skill-r"src="media/R_Logo.png" alt="R_Logo"> <br /><br /><br /><br />
+
+
+        
+        <p class="lan-level">LEVEL 4 </p><p class="language lan-python">Python</p><p class="language lan-html">HTML</p><p class="language lan-css">css</p><br />
+        <p class="lan-level">LEVEL 3 </p><p class="language lan-java">JAVA</p><p class="language lan-r">R</p><p class="language lan-sql">sql</p><br />
+        <p class="lan-level">LEVEL 2 </p><p class="language lan-c">C programming</p><br />
+        <p class="lan-level">LEVEL 1 </p><p class="language lan-js">Java script</p><br />
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
       </div>
 
-      <div>
+      <div id="education">
         <!-- Education -->
-        <p><i class="fa-solid fa-graduation-cap"></i>Education</p>
+        <p class="resume-title"><i class="fa-solid fa-graduation-cap"></i> Education </p>
         <p>광운대학교 정보융합학부 데이터사이언스</p>
         <p>certificate</p>
         <p>리눅스마스터2</p>

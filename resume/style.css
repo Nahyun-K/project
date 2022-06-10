@@ -73,27 +73,155 @@ nav a#pull{
  }
  
  /* index.html */
- .main-background {
-   width: 40%;
-   height: 1000px;
-   background-color: aqua;
-  display: inline-block;
- }
-.main-self {
-  padding: 20px;
-  width: 300px;
-  height: 600px;
-  background-color: antiquewhite;
-  display: inline-block;
+.firstpage-info {
+  background-color: pink;
+  margin: 30px 0px;
+  padding: 30px 0px 60px 0px;
 }
-.main-img {
-  width: 150px;
+.sns-info {
+  display: flex;
+  justify-content: space-between;
+}
+.instagram {
+  box-shadow: 10px 10px 15px #E2E2E2;
+  width: 400px;
   height: auto;
+  margin: 50px 20px 50px 600px;
 }
+.i-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.i-img {
+  width: 400px;
+  height: 400px;
+}
+.i-id {
+  display: inline-block;
+}
+.fa-user {
+  margin: 10px 25px 10px 25px;
+}
+.insta-div {
+  display: inline;
+}
+.i-con {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.fa-ellipsis-vertical {
+  margin: 25px;
+}
+.fa-heart {
+  width: 40px;
+  height: auto;
+  margin: 20px 0px 25px 20px;
+}
+.fa-bookmark {
+  margin: 20px;
+}
+.info {
+  margin: 200px 700px 50px 20px;
+  
+}
+.emailto {
+  
+}
+
+
+
+.slider{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
+}
+.slider input[type=radio]{
+    display: none;
+}
+ul.imgs{
+    padding: 0;
+    margin: 0;
+    list-style: none;    
+}
+ul.imgs li{
+    position: absolute;
+    left: 640px;
+    transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+
+    padding: 0;
+    margin: 0;
+}
+.bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+}
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.55);
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+
+
+
+
+
 
 /* resume.html */
 .myprofile{
   padding: 100px 200px 100px 200px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.myprofile-in {
+  padding: 36px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  display: inline-block;
+  background-color: antiquewhite;
 }
 .img_myprofile{
    width: 200px;
@@ -108,24 +236,43 @@ nav a#pull{
   border-radius: 30px;
   text-align: center;
   display: inline-block;
-  padding: 5px;
+  padding: 8px 10px;
+  margin: 5px;
   background-color: #E2E2E2;
 }
+#resume {
+  margin: 100px 450px;
+}
+.resume-title {
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 10px;
+  background-color: #E2E2E2;
+  font-size: 24px;
+}
 
+#about-me, #projects, #work-skills, #education {
+  margin: 100px 0px;
+}
+.lan-level {
+  display: inline-block;
+  margin: 5px 10px 5px 5px;
+}
 .language {
   border-radius: 30px;
   text-align: center;
   display: inline-block;
-  padding: 5px;
+  padding: 9px;
   background-color: #E2E2E2;
+  margin: 5px;
 }
 .skill-c{
   width: 100px;
   height: auto;
 }
-
 .skill-java{
-  width: 100px;
+  width: 150px;
   height: auto;
 
 }
@@ -134,20 +281,23 @@ nav a#pull{
   height: auto;
 }
 .skill-htmlcssjs{
-  width: 100px;
+  width: 220px;
   height: auto;
 }
 .skill-mysql{
-  width: 100px;
+  width: 200px;
   height: auto;
 }
 .skill-php{
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 .skill-r{
-  width: 100px;
+  width: 120px;
   height: auto;
+}
+.skill_img {
+  margin: 15px;
 }
 
 
@@ -185,6 +335,58 @@ nav a#pull{
     align-items: center;
     text-align: center;
 }
+.img-food {
+  width: 350px;
+  height: auto;
+}
+.img-blog {
+  width: 500px;
+  height: auto;
+
+}
+.img-baseball {
+  width: 500px;
+  height: auto;
+
+}
+.img-travel {
+  width: 400px;
+  height: auto;
+
+}
+.fav-img {
+  margin: 50px;
+}
+
+.fav-describe {
+  margin: 150px 350px;
+}
+.video-fav {
+  text-align: center;
+  width: 525px;
+  display: inline-block;
+  margin: 0px 10px 10px 10px;
+}
+.video-baseball {
+  width: 525px;
+  margin: 0px 10px 5px 5px;
+}
+.video-travel2 {
+  width: 525px;
+  margin: 5px 10px 0px 5px;
+}
+.video-travel1 {
+  width: 397px;
+  margin: 0px 0px 0px 5px;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -193,54 +395,288 @@ nav a#pull{
 
 
 /* guest.html */
-.sns-info {
+
+.imessage {
+  background-color: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 0.25rem;
   display: flex;
-  justify-content: space-between;
-}
-.instagram {
-  box-shadow: 10px 10px 15px #E2E2E2;
-  width: 400px;
-  height: auto;
-  margin: 50px 20px 50px 600px;
-}
-.i-header {
-  display: flex;
-  justify-content: space-between;
-}
-.i-img {
-  width: 400px;
-  height: 400px;
-}
-.i-id {
-  display: inline-block;
-}
-.fa-user {
-  margin: 10px 25px 10px 25px;
-}
-.insta-div {
-  display: inline;
-}
-.i-con {
-  display: flex;
-  justify-content: space-between;
-}
-.fa-ellipsis-vertical {
-  margin: 25px;
-}
-.fa-heart {
-  width: 40px;
-  height: auto;
-  margin: 20px 0px 25px 20px;
-}
-.fa-bookmark {
-  margin: 20px;
-}
-.info {
-  margin: 50px 700px 50px 20px;
-}
-.emailto {
-  
+  flex-direction: column;
+  font-family: "SanFrancisco";
+  font-size: 1.25rem;
+  margin: 0 auto 1rem;
+  max-width: 600px;
+  padding: 0.5rem 1.5rem;
 }
 
+.imessage p {
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 75%;
+  padding: 0.5rem .875rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.imessage p::before,
+.imessage p::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+p.from-me {
+  align-self: flex-end;
+  background-color: #248bf5;
+  color: #fff; 
+}
+
+p.from-me::before {
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid #248bf5;
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-me::after {
+  background-color: #fff;
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform:translate(-30px, -2px);
+  width: 10px;
+}
+
+p[class^="from-"] {
+  margin: 0.5rem 0;
+  width: fit-content;
+}
+
+p.from-me ~ p.from-me {
+  margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:not(:last-child) {
+  margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:last-child {
+  margin-bottom: 0.5rem;
+}
+
+p.from-them {
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+}
+
+p.from-them:before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #e5e5ea;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-them::after {
+  background-color: #fff;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+p[class^="from-"].emoji {
+  background: none;
+  font-size: 2.5rem;
+}
+
+p[class^="from-"].emoji::before {
+  content: none;
+}
+
+.no-tail::before {
+  display: none;
+}
+
+.margin-b_none {
+  margin-bottom: 0 !important;
+}
+
+.margin-b_one {
+  margin-bottom: 1rem !important;
+}
+
+.margin-t_one {
+  margin-top: 1rem !important;
+}
+#uName {
+  width: 600px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+  margin: 10px;
+}
+#uContent {
+  width: 600px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+  margin: 10px;
+}
+
+
+/* GENERAL BUTTON STYLING */
+.btn,
+.btn::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn {
+  
+  display: block;
+  margin: 1em auto;
+  padding: 2em 6em;
+  text-transform: uppercase;
+  background:#248bf5;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+
+}
+
+.btn::before,
+.btn::after {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #248bf5;
+  transition:400ms ease all;
+}
+
+.btn:hover {
+  background:#fff;
+  color:#248bf5;
+}
+
+/* BUTTON 2 */
+.btn::after {
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.btn:hover:before,.btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+#guest-book {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+#bbsTable {
+  text-align: center;
+}
+.tb1-tr {
+  height: 50px;
+}
+.tbl {
+  height: 150px;
+}
+
+/* general styling */
+@font-face {
+  font-family: "SanFrancisco";
+  src:
+    url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
+    url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+}
+
+body {  
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 70px 1rem;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  border-bottom: 1px solid #e5e5ea;
+  color: #666;
+  font-weight: normal;
+  margin-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.comment {
+  color: #222;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+  padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin: 0 0.5rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .imessage {
+    font-size: 1.05rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    padding: 0.25rem 0.875rem;
+  }
+
+  .imessage p {
+    margin: 0.5rem 0;
+  }
+}
 
 /* https://studiomeal.com/archives/197 */
